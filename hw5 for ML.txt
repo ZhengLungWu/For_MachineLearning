@@ -1,0 +1,86 @@
+GUIDE(Generalized, Unbiased Interaction Detection and Estimation )[2]
+QUEST(Quick, Unbiased, Efficient, Statistical Tree)[3]
+CRUISE(Classification Rule with Unbiased Interaction Selection and Estimation)[5]
+
+
+Unbiased splits: 
+GUIDE:: 
+which uses classification tree to solve regression tree problem. Because it uses estimated probabilities to evaluate the associated variables, the result is compared to other algorithms that seemed relatively  unbiased. In Loh’s essay, the all probabilities of numerical\categorical variables are in 3 standard deviations. [2]
+QUEST::
+Based on FACT method, uses statistical tests to choose the variable. A threshold value F0 is chosen and an ANOVA F-statistical is computed for every variable. If the largest F-statistic exceeds F0, the variable with the largest F-value is selected to split the node. QUEST algorithm uses Bonferroni correction to ensure that the bias is practically negligible.[3]
+CRUISE::
+It performs a Box-Cox transformation on the X (variable for split) before application of LDA(Linear Discriminant Analysis). If X is categorical variable, it is first converted to a 0-1 vector.(…) that would ensure the probability of variable is stable. [5]
+
+Split Type:
+Univariate split::
+splits on one variable at a time.[1]
+Linear split::
+
+Split of Linear Combination of different variables at a time.[1]
+
+Branches/Splits:
+The number of branches the each node would produce
+Pruning:
+Remove the branch that has too much costs.
+
+User-Specified Costs:
+The misclassification cost that specified by the user.
+User-Specified Priors :
+The Prior Probability of class that specified by the user.
+
+Variable Ranking:
+
+Node Model:
+Constant Model::
+See each node as a constant number.
+Discriminant Model::
+By using Linear Discriminant Analysis method to evaluate the node and splits.[1]
+Kernel Density Model::
+Node that uses Gaussian kernel density estimate to evaluate the splits.[1] 
+Nearest Neighbor Model::
+We use the same idea of kernel density model for nearest-neighbor models. For noncategorical variables, 
+the number of nearest neighbors, k, is given by the formula 
+k = max(3, ⌈log n⌉). [1]
+
+Bagging& Ensembles:
+Bagging (Breiman (1996)) is a technique for improving the prediction accuracy of regression trees. It creates an ensemble of trees by repeatedly drawing bootstrap samples from the training sample and constructing a tree from each sample. [2]
+
+Missing Values:
+Probability Weights::
+ weight corresponding to the estimated probability for the particular missing value (based on the frequency of values at this split in the training data)[7]
+Surrogate split::
+If there is any unfit split or the cost is too large or the probability is too low, then the algorithm will generate an alternative split to replace the original one.
+Missing Value Branch::
+missing values will be treated as a predictor category. For ordinal predictors, the algorithm first generates the “best” set of categories using all non-missing information from the data[8]
+Missing Value Imputation::
+QUEST uses imputation instead of surrogate splits to deal with missing values.
+Missing Value Category::
+GUIDE treats missing values as belonging to a separate category [1]
+
+ 
+[1] WEI-YIN LOH , IMPROVING THE PRECISION OF CLASSIFICATION TREES 
+[2] Wei-Yin Loh ,Regression Trees With Unbiased Variable Selection and Interaction Detection Statistica Sinica (2002) vol. 12, pp. 361–386 
+[3] Wei-Yin Loh and Yu-Shan Shih , SPLIT SELECTION METHODS FOR CLASSIFICATION TREES 
+[4] Wei-Yin Loh ,Classification and regression trees 
+[5] Hyunjoong Kim and Wei-Yin Loh ,Classification Trees With Unbiased Multiway Splits 
+[6]http://www2.ims.nus.edu.sg/Programs/014swclass/files/loh.pdf
+[7],Maytal Saar-Tsechansky, Foster Provost, Handling Missing Values when Applying Classification Models
+[8]https://www.ibm.com/support/knowledgecenter/en/SSLVMB_20.0.0/com.ibm.spss.statistics.help/alg_tree-chaid_missing.htm
+[9]http://www.ccunix.ccu.edu.tw/~mthyss/quest.html
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
