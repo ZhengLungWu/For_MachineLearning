@@ -1,0 +1,24 @@
+
+[1]The alternating decision tree learning algorithm
+https://cseweb.ucsd.edu/~yfreund/papers/atrees.pdf
+
+[2]Behavior tree
+https://en.wikipedia.org/wiki/Behavior_tree_(artificial_intelligence,_robotics_and_control)
+
+[3]Simplifying Decision Tree
+https://dspace.mit.edu/bitstream/handle/1721.1/6453/AIM-930.pdf?sequence=2
+
+[4]Construction of Decision Trees
+https://dspace.mit.edu/bitstream/handle/1721.1/5845/AIM-189.pdf?sequence=2
+
+[5]How To Implement The Decision Tree Algorithm From Scratch In Python
+https://machinelearningmastery.com/implement-decision-tree-algorithm-scratch-python/
+
+[6]Decision Tree Learning
+http://www.cs.princeton.edu/courses/archive/spr07/cos424/papers/mitchell-dectrees.pdf
+
+[7]SCIKIT-Decsion Trees
+http://scikit-learn.org/stable/modules/tree.html
+
+[8] Spark 2- Decision Tree
+https://spark.apache.org/docs/latest/mllib-decision-tree.html
