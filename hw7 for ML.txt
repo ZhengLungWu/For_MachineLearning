@@ -1,0 +1,23 @@
+Hw7 for ML
+1.機器學習介紹
+1.1.機器學習之資料由特徵和標籤組成
+1.2.程式運作可分為資料準備階段，訓練評估階段，測試階段和預測階段
+2. ＳＰＡＲＫ介紹
+核心為彈性分散式資料集（ＲＤＤ）
+於記憶體內執行程式
+3.ＳＰＡＲＫ機器學習
+Spark MLlib: RDD-based API
+Spark ML pipeline: DataFame- based  API
+Spark DataFrame can be exchanged with Pandas DataFrame
+4. 大數據定義
+大量資料，容易達到ＴＢ等級以上
+多樣化
+傳輸和處理速度須快和即時
+5.ＨＡＤＯＯＰ簡介
+儲存和處理大量資料的平台
+採分散式檔案系統（ＨＤＦＳ）
+6. Hadoop MapReduce
+Map:將工作分割成小工作，由每台伺服器分別執行
+Reduce:將所有伺服器的運算結果彙整，傳回最後結果
+其架構於2.0後稱為YARN( Yet Another Resource Negotiator )
+
