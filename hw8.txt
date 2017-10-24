@@ -1,0 +1,15 @@
+Virtual box掛ubuntu
+安裝single node時和書本上寫的步驟一樣
+不過在安裝multi node cluster時，發現背景設定好時，
+系統會拒絕連線．
+Port 22 refuse to connect
+上網查了一下發現安裝openssh就解決了這個問題
+由於在single node時 master虛擬裝置在hadoop的參數名稱是localhost
+所以得把它改成以master命名，不然會無法連上其他機器data1 data2 data3
+最後是在執行時發現一個有趣的現象
+如果虛擬機器的記憶體設定於1ＧＢ以下，hadoop就會讀不到那個node
+把它們調整到1GB就可以解決這個問題．
+大致是安裝所遇到的問題和心得
+
+
+
